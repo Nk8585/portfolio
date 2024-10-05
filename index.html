@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="logo2.jpg" height="100cm" width="200cm" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Fronted Developer</p>
+            <h1>Hi, I'am <span>Nitin kumar</span><br>From Kanpur</h1>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="about-col-1">
+                <img src="IMG_20230619_203054.jpg" height="300px" width="250px">
+            </div>
+            <div class="about-col-2"></div>
+            <h1 class="sub-title">About Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus cum, 
+                quia ipsa accusantium facere minima  amet similique rerum, vel neque
+                 explicabo eum animi modi blanditiis veniam dolorum non saepe tempora?</p>
+
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Eperience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                 </div>
+                 <div class="tab-content active-tab" id="Skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development </span><br>Building Android/ IOS apps</li>
+                    </ul>
+                 </div>
+                 <div class="tab-content" id="Experience">
+                    <ul>
+                        <li><span>2024-Current</span><br>Bachalor of computer application</li>
+                        <li><span>2023-2024</span><br>Youtube </li>
+                        <li><span>2022-2023</span><br>Thumnail design from Canva</li>
+                    </ul>
+                 </div>
+                 <div class="tab-content" id="Education">
+                    <ul>
+                        <li><span>2024</span><br>Bachalor of computer application</li>
+                        <li><span>2024</span><br>Web app Development Kanpur</li>
+                        <li><span>2023</span><br>Building Android/ IOS apps Kanpur</li>
+                    </ul>
+                 </div>
+        </div>
+    </div>
+    <!---------------------------services------------------->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis alias aperiam odit ducimus pariatur, 
+                        minima perspiciatis fuga recusandae eligendi quam?</p>
+                        <a href="#">learn more</a>
+                </div>
+                <div>
+                    <div>
+                        <h2>UI/UX Design</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Reiciendis alias aperiam odit ducimus pariatur, 
+                            minima perspiciatis fuga recusandae eligendi quam?</p>
+                            <a href="#">learn more</a>
+                    </div>
+                </div>
+                    <h2>App Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis alias aperiam odit ducimus pariatur, 
+                        minima perspiciatis fuga recusandae eligendi quam?</p>
+                        <a href="#">learn more</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByName("tab-links");
+        var tabcontents = document.getElementsByName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html>
